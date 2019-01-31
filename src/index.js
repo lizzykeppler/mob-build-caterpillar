@@ -5,8 +5,23 @@
 //when the button clicks it creates the span 
 //add styling
 
-const fruitNode = document.getElementById('fruit-buttons');
-const button = document.createElement('button');
+const fruits = ['apple', 'banana', 'kiwi', 'kumquat', 'watermelon'];
 
-fruitNode.appendChild(button);
-button.textContent = 'feed me';
+
+const fruitNode = document.getElementById('fruit-buttons');
+
+
+for(let index = 0; index < fruits.length; index++) {
+    let fruit = fruits[index];
+    
+    const button = document.createElement('button');
+    fruitNode.appendChild(button);
+    button.textContent = fruit;
+
+    button.addEventListener('click', function(){
+        console.log(fruit);
+    });
+
+
+}
+
