@@ -6,11 +6,8 @@
 //add styling
 
 const fruits = ['apple', 'banana', 'kiwi', 'kumquat', 'watermelon'];
-
-
 const fruitNode = document.getElementById('fruit-buttons');
 const caterpillarNode = document.getElementById('caterpillar');
-
 
 for(let index = 0; index < fruits.length; index++) {
     let fruit = fruits[index];
@@ -23,10 +20,16 @@ for(let index = 0; index < fruits.length; index++) {
     button.addEventListener('click', function(){
         const catSpan = document.createElement('span');
         caterpillarNode.appendChild(catSpan);
-        catSpan.classList.add('fruit-span', fruit);
-
+        catSpan.classList.add('fruit-span', fruit); 
     });
-
-
 }
 
+//dance button code//
+
+const danceNode = document.getElementById('dance-button');
+const danceButton = document.createElement('button');
+danceNode.appendChild(danceButton);
+danceButton.textContent = 'Make it dance...';
+
+danceButton.addEventListener('click', function() {
+});
