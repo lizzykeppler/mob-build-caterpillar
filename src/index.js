@@ -9,6 +9,7 @@ const fruits = ['apple', 'banana', 'kiwi', 'kumquat', 'watermelon'];
 const fruitNode = document.getElementById('fruit-buttons');
 const caterpillarNode = document.getElementById('caterpillar');
 
+
 for(let index = 0; index < fruits.length; index++) {
     let fruit = fruits[index];
     
@@ -21,17 +22,39 @@ for(let index = 0; index < fruits.length; index++) {
     button.addEventListener('click', function(){
         const catSpan = document.createElement('span');
         caterpillarNode.appendChild(catSpan);
-        catSpan.classList.add('fruit-span', fruit + '-circle', fruit);
+        catSpan.classList.add('fruit-span', fruit); //adding two classes; one is a string
+        let fruitCircleSelector = fruit + '-circle'; //concatonating the fruit
+        catSpan.classList.add(fruitCircleSelector); //
+        console.log(catSpan);
     });
-}
+} 
 
 //dance button code//
+for(let index = 0; index < fruits.length; index++) {
+    let fruit = fruits[index];
+    const danceNode = document.getElementById('dance-button'); //grabbing 
+    const danceButton = document.createElement('button'); //creating
+    danceNode.appendChild(danceButton);
+    danceButton.textContent = fruit + ' dance';
 
-const danceNode = document.getElementById('dance-button');
-const danceButton = document.createElement('button');
-danceNode.appendChild(danceButton);
-danceButton.textContent = 'Make it dance...';
+    danceButton.addEventListener('click', function() {
+        const fruitSpanArray = document.querySelectorAll('.' + fruit + '-circle');  //grabbed 
+        const allFruitSpanArray = document.querySelectorAll('.fruit-span');
 
-danceButton.addEventListener('click', function() {
-    
-});
+        for(let index = 0; index < allFruitSpanArray.length; index++) {
+            allFruitSpanArray[index].classList.remove('fruit-dance');  
+        }
+        
+        
+        
+        for(let index = 0; index < fruitSpanArray.length; index++) {
+            fruitSpanArray[index].classList.add('fruit-dance');  //attaching a class to these Nodes
+        }
+    });
+
+
+
+}
+
+
+
