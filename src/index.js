@@ -9,6 +9,7 @@ const fruits = ['apple', 'banana', 'kiwi', 'kumquat', 'watermelon'];
 
 
 const fruitNode = document.getElementById('fruit-buttons');
+const caterpillarNode = document.getElementById('caterpillar');
 
 
 for(let index = 0; index < fruits.length; index++) {
@@ -17,9 +18,13 @@ for(let index = 0; index < fruits.length; index++) {
     const button = document.createElement('button');
     fruitNode.appendChild(button);
     button.textContent = fruit;
+    button.classList.add(fruit, 'fruit-button');
 
     button.addEventListener('click', function(){
-        console.log(fruit);
+        const catSpan = document.createElement('span');
+        caterpillarNode.appendChild(catSpan);
+        catSpan.classList.add('fruit-span', fruit);
+
     });
 
 
