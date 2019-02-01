@@ -16,11 +16,12 @@ for(let index = 0; index < fruits.length; index++) {
     fruitNode.appendChild(button);
     button.textContent = fruit;
     button.classList.add(fruit, 'fruit-button');
-
+    
+    
     button.addEventListener('click', function(){
         const catSpan = document.createElement('span');
         caterpillarNode.appendChild(catSpan);
-        catSpan.classList.add('fruit-span', fruit); 
+        catSpan.classList.add('fruit-span', fruit + '-circle', fruit);
     });
 }
 
@@ -32,4 +33,5 @@ danceNode.appendChild(danceButton);
 danceButton.textContent = 'Make it dance...';
 
 danceButton.addEventListener('click', function() {
+    
 });

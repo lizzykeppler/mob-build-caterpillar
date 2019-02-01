@@ -42,6 +42,6 @@
     background-color: hotpink;
 }
 
-
-
-
+.fruit-dance {
+    transform: translate(0px, 50%);
+}
