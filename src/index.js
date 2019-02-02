@@ -45,8 +45,6 @@ for(let index = 0; index < fruits.length; index++) {
             allFruitSpanArray[index].classList.remove('fruit-dance');  
         }
         
-        
-        
         for(let index = 0; index < fruitSpanArray.length; index++) {
             fruitSpanArray[index].classList.add('fruit-dance');  //attaching a class to these Nodes
         }
